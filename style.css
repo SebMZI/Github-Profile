@@ -167,6 +167,7 @@ body {
 }
 
 .container__user-repos-list-item {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -175,6 +176,10 @@ body {
   border-radius: 5px;
   justify-content: space-between;
   min-height: 125px;
+  transition: all 0.2s ease;
+}
+.container__user-repos-list-item:hover {
+  opacity: 0.7;
 }
 .container__user-repos-list-item-title {
   color: #cdd5e0;
