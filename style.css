@@ -271,6 +271,7 @@ body {
   }
   .container__user-details-info {
     padding: 2rem;
+    align-items: center;
     flex-direction: row;
   }
   .container__user-details-info-item {
