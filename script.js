@@ -73,7 +73,7 @@ function handleUserRepos(data) {
   } else {
     data.slice(0, 4).forEach((repo) => {
       let article = document.createElement("article");
-      article.classList.add("repo");
+      article.classList.add("container__user-repos-list-item");
       article.innerHTML = `
        <h2 class="container__user-repos-list-item-title">${repo.name}</h2>
         <p class="container__user-repos-list-item-description">${
@@ -81,16 +81,16 @@ function handleUserRepos(data) {
         }</p>
         <div class="container__user-repos-list-item-footer">
             <span class="container__user-repos-list-item-footer-licence"><img src="assets/Chield_alt.svg" alt="License">${
-              repo.license.key
+              repo?.license?.key
             }</span>
             <span class="container__user-repos-list-item-footer-forks"><img src="assets/Nesting.svg" alt="Forks">${
-              repo.forks_count
+              repo?.forks_count
             }</span>
             <span class="container__user-repos-list-item-footer-stars"><img src="assets/Star.svg" alt="Stars">${
-              repo.stargazers_count
+              repo?.stargazers_count
             }</span>
             <span class="container__user-repos-list-item-footer-updated">${getTimeAgo(
-              repo.updated_at
+              repo?.updated_at
             )}</span>
         </div>
       `;
