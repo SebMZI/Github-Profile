@@ -28,7 +28,8 @@ body {
 }
 
 .header__search-bar {
-  width: 65%;
+  max-width: 80%;
+  width: 100%;
   margin-top: 1.25rem;
   display: flex;
   flex-direction: row;
@@ -49,9 +50,76 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  color: #97a3b6;
+  color: #4a5567;
 }
 
 .header__search-bar-input::placeholder {
-  color: #97a3b6;
+  color: #4a5567;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #20293a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__user-details {
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.container__user-details-image {
+  position: relative;
+  padding: 5px;
+  top: -50%;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 5px;
+  background-color: #20293a;
+}
+
+.container__user-details-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.container__user-details-info-item {
+  position: relative;
+  list-style: none;
+  padding: 10px;
+  background-color: #111729;
+  border-radius: 5px;
+  color: #4a5567;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.container__user-details-info-item-label::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  height: 75%;
+  margin: auto 10px;
+  width: 1px;
+  background-color: #4a5567;
+  position: absolute;
+}
+
+.container__user-details-info-item-value {
+  color: #cdd5e0;
+  margin-left: 10px;
 }
