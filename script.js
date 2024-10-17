@@ -71,32 +71,40 @@ function handleUserRepos(data) {
     noRepos.textContent = "No repositories found";
     repoContainer.appendChild(noRepos);
   } else {
-    data.slice(0, 4).forEach((repo) => {
+    data?.slice(0, 4)?.forEach((repo) => {
       console.log(repo);
       let article = document.createElement("article");
       article.classList.add("container__user-repos-list-item");
       article.innerHTML = `
-      <link href="${repo.url}" target="_blank" >
-            <h2 class="container__user-repos-list-item-title">${repo.name}</h2>
-            <p class="container__user-repos-list-item-description">${
-              repo.description
-            }</p>
-            <div class="container__user-repos-list-item-footer">
-                <span class="container__user-repos-list-item-footer-licence"><img src="assets/Chield_alt.svg" alt="License">${
-                  repo?.license?.key
-                }</span>
-                <span class="container__user-repos-list-item-footer-forks"><img src="assets/Nesting.svg" alt="Forks">${
-                  repo?.forks_count
-                }</span>
-                <span class="container__user-repos-list-item-footer-stars"><img src="assets/Star.svg" alt="Stars">${
-                  repo?.stargazers_count
-                }</span>
-                <span class="container__user-repos-list-item-footer-updated">${getTimeAgo(
-                  repo?.updated_at
-                )}</span>
-            </div>
-        </link>
-      `;
+              <h2 class="container__user-repos-list-item-title">${
+                repo.name
+              }</h2>
+              <p class="container__user-repos-list-item-description">${
+                repo.description || "No description available"
+              }</p>
+              <div class="container__user-repos-list-item-footer">
+                  <span class="container__user-repos-list-item-footer-licence">
+                      <img src="assets/Chield_alt.svg" alt="License">
+                      ${repo?.license?.key || "No license"}
+                  </span>
+                  <span class="container__user-repos-list-item-footer-forks">
+                      <img src="assets/Nesting.svg" alt="Forks">
+                      ${repo?.forks_count || 0}
+                  </span>
+                  <span class="container__user-repos-list-item-footer-stars">
+                      <img src="assets/Star.svg" alt="Stars">
+                      ${repo?.stargazers_count || 0}
+                  </span>
+                  <span class="container__user-repos-list-item-footer-updated">
+                      ${getTimeAgo(repo?.updated_at)}
+                  </span>
+              </div>
+        `;
+
+      article.addEventListener("click", () => {
+        window.open(repo.html_url || "https://github.com/SebMZI", "_blank");
+      });
+
       repoContainer.appendChild(article);
     });
   }

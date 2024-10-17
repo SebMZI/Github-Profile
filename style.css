@@ -300,4 +300,7 @@ body {
   .container__user-repos-list-item-title {
     font-size: 18px;
   }
+  .container__user-repos-button {
+    font-size: 16px;
+  }
 }
