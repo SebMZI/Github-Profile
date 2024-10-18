@@ -9,21 +9,21 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__search-bar">
+        <form class="header__search-bar">
             <img src="assets/Search.svg" alt="Search username icon" class="header__search-bar-icon">
             <input type="text" placeholder="username" id="username" class="header__search-bar-input">
-        </div>
+        </form>
     </header>
     <main class="container">
-        <div class="container__user-details">
+        <section class="container__user-details">
             <img src="" alt="X profile picture" class="container__user-details-image">
             <ul class="container__user-details-info">
                 <li class="container__user-details-info-item"><span class="container__user-details-info-item-label">Followers</span><span id="followers" class="container__user-details-info-item-value">27839</span></li>
                 <li class="container__user-details-info-item"><span class="container__user-details-info-item-label">Following</span><span id="following" class="container__user-details-info-item-value">0</span></li>
                 <li class="container__user-details-info-item"><span class="container__user-details-info-item-label">Location</span><span id="location" class="container__user-details-info-item-value">San Francisco, CA</span></li>    
             </ul>
-        </div>
-        <div class="container__user-repos">
+        </section>
+        <section class="container__user-repos">
             <div class="container__user-repos-header">
                 <h1 class="container__user-repos-header-username">GitHub</h1>
                 <span class="container__user-repos-header-description">How people build software.</span>
@@ -42,7 +42,7 @@
                 </article>
             </div>
             <button class="container__user-repos-button">View all repository</button>
-        </div>
+        </section>
     </main>
 </body>
 </html>
