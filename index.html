@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <header class="header">
-        <form class="header__search-bar">
-            <img src="assets/Search.svg" alt="Search username icon" class="header__search-bar-icon">
-            <input type="text" placeholder="username" id="username" class="header__search-bar-input">
-        </form>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <form class="header__search-bar">
+        <img
+          src="assets/Search.svg"
+          alt="Search username icon"
+          class="header__search-bar-icon"
+        />
+        <input
+          type="text"
+          placeholder="username"
+          id="username"
+          role="searchbox"
+          class="header__search-bar-input"
+        />
+      </form>
     </header>
     <main class="container">
-        <section class="container__user-details">
-            <img src="" alt="X profile picture" class="container__user-details-image">
-            <ul class="container__user-details-info">
-                <li class="container__user-details-info-item"><span class="container__user-details-info-item-label">Followers</span><span id="followers" class="container__user-details-info-item-value">27839</span></li>
-                <li class="container__user-details-info-item"><span class="container__user-details-info-item-label">Following</span><span id="following" class="container__user-details-info-item-value">0</span></li>
-                <li class="container__user-details-info-item"><span class="container__user-details-info-item-label">Location</span><span id="location" class="container__user-details-info-item-value">San Francisco, CA</span></li>    
-            </ul>
-        </section>
-        <section class="container__user-repos">
-            <div class="container__user-repos-header">
-                <h1 class="container__user-repos-header-username">GitHub</h1>
-                <span class="container__user-repos-header-description">How people build software.</span>
+      <section class="container__user-details">
+        <img
+          src=""
+          alt="X profile picture"
+          class="container__user-details-image"
+        />
+        <ul class="container__user-details-info">
+          <li class="container__user-details-info-item">
+            <span class="container__user-details-info-item-label"
+              >Followers</span
+            ><span
+              id="followers"
+              class="container__user-details-info-item-value"
+              >27839</span
+            >
+          </li>
+          <li class="container__user-details-info-item">
+            <span class="container__user-details-info-item-label"
+              >Following</span
+            ><span
+              id="following"
+              class="container__user-details-info-item-value"
+              >0</span
+            >
+          </li>
+          <li class="container__user-details-info-item">
+            <span class="container__user-details-info-item-label">Location</span
+            ><span id="location" class="container__user-details-info-item-value"
+              >San Francisco, CA</span
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="container__user-repos">
+        <div class="container__user-repos-header">
+          <h1 class="container__user-repos-header-username">GitHub</h1>
+          <span class="container__user-repos-header-description"
+            >How people build software.</span
+          >
+        </div>
+        <div class="container__user-repos-list">
+          <article class="container__user-repos-list-item">
+            <h2 class="container__user-repos-list-item-title">Hello-world</h2>
+            <p class="container__user-repos-list-item-description">
+              This is your first repository on GitHub. This...This is your first
+              repository on GitHub. This...
+            </p>
+            <div class="container__user-repos-list-item-footer">
+              <span class="container__user-repos-list-item-footer-licence"
+                ><img src="assets/Chield_alt.svg" alt="License" />MIT</span
+              >
+              <span class="container__user-repos-list-item-footer-forks"
+                ><img src="assets/Nesting.svg" alt="Forks" />7</span
+              >
+              <span class="container__user-repos-list-item-footer-stars"
+                ><img src="assets/Star.svg" alt="Stars" />7</span
+              >
+              <span class="container__user-repos-list-item-footer-updated"
+                >updated 2 days ago</span
+              >
             </div>
-            <div class="container__user-repos-list">
-                <article class="container__user-repos-list-item">
-                   <h2 class="container__user-repos-list-item-title">Hello-world</h2>
-                   <p class="container__user-repos-list-item-description">This is your first repository on GitHub. This...This is your first repository on GitHub. This...
-                    </p>
-                    <div class="container__user-repos-list-item-footer">
-                        <span class="container__user-repos-list-item-footer-licence"><img src="assets/Chield_alt.svg" alt="License">MIT</span>
-                        <span class="container__user-repos-list-item-footer-forks"><img src="assets/Nesting.svg" alt="Forks">7</span>
-                        <span class="container__user-repos-list-item-footer-stars"><img src="assets/Star.svg" alt="Stars">7</span>
-                        <span class="container__user-repos-list-item-footer-updated">updated 2 days ago</span>
-                    </div>
-                </article>
-            </div>
-            <button class="container__user-repos-button">View all repository</button>
-        </section>
+          </article>
+        </div>
+        <button class="container__user-repos-button" role="button">
+          View all repository
+        </button>
+      </section>
     </main>
-</body>
+  </body>
 </html>
-
-
-
